@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  height: 100vh;
+  /* Set the height of the calendar to fill the viewport */
+  background-image: url("../images/img1.jpg");
+  /* Replace with the actual path to your background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* style.css */
+
+/* style.css */
+
+.calendar {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 500px;
+  margin: 50px auto;
+  border-radius: 12px;
+}
+
+/* style.css */
+
+.calendar-header {
+  background-color: #4285f4;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Display in a column layout */
+  align-items: flex-start; /* Align items to the left */
+  text-align: left;
+  margin-bottom: 2px;
+  border-radius: 12px;
+}
+
+.header-right {
+  display: flex;
+
+}
+
+.header-right label {
+  margin-right: 10px;
+}
+
+.header-right select {
+  padding: 2px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* ... (other styles) ... */
+
+
+.calendar-body {
+  display: flex;
+  
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.month {
+  margin-bottom: 20px;
+}
+
+.current-month {
+  border: 2px solid #4285f4;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.add-event-icon {
+  margin-left: 5px;
+}
+
+/* ... (existing styles) ... */
+
+.add-event-icon {
+  font-size: 8px;
+  /* Adjust the font size as needed */
+  margin-left: 5px;
+}
+
+/* ... (existing styles) ... */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  position: relative;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #acd8f5;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.today {
+  background-color: #3498db;
+  color: #fff;
+}
+.today.sunday {
+  background-color: #3498db; /* Use the blue color for the current date on Sunday */
+  color: #fff;
+}
+.sunday {
+  background-color: red; /* Same background color as other days */
+  color:rgba(0, 0, 0, 0.5);
+}
+
+.day:hover {
+  background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 600px) {
+  .calendar {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .day {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+.event-tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #4285f4;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button.cancel {
+  background-color: #ffffff;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+}
+
+.button:hover {
+  background-color: #3367d6;
+}
+
+.button.cancel:hover {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+
+
+
+/* ... (existing styles) ... */
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.event-creation-page {
+  background-image: url(../images/giphy.gif);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  position: fixed;
+  top: 10%;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
